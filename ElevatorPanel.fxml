@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ElevatorPanelController">
+   <children>
+      <HBox layoutX="-6.0" layoutY="-9.0" prefHeight="352.0" prefWidth="599.0">
+         <children>
+            <AnchorPane fx:id="FloorButtons" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="87.0" layoutY="14.0" text="Floor">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="FloorUP" layoutX="40.0" layoutY="199.0" mnemonicParsing="false" onAction="#FloorUPButtons" text="UP" />
+                  <Button fx:id="FloorDOWN" layoutX="110.0" layoutY="199.0" mnemonicParsing="false" onAction="#FloorDOWNButton" text="DOWN" />
+                  <RadioButton fx:id="FloorOne" layoutX="22.0" layoutY="63.0" mnemonicParsing="false" text="1">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="FloorGroup" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="FloorThree" layoutX="107.0" layoutY="63.0" mnemonicParsing="false" text="3" toggleGroup="$FloorGroup" />
+                  <RadioButton fx:id="FloorSix" layoutX="65.0" layoutY="108.0" mnemonicParsing="false" text="6" toggleGroup="$FloorGroup" />
+                  <RadioButton fx:id="FloorTwo" layoutX="58.0" layoutY="63.0" mnemonicParsing="false" text="2" toggleGroup="$FloorGroup" />
+                  <RadioButton fx:id="FloorFive" layoutX="21.0" layoutY="108.0" mnemonicParsing="false" text="5" toggleGroup="$FloorGroup" />
+                  <RadioButton fx:id="FloorEight" layoutX="147.0" layoutY="108.0" mnemonicParsing="false" text="8" toggleGroup="$FloorGroup" />
+                  <RadioButton fx:id="FloorTen" layoutX="121.0" layoutY="146.0" mnemonicParsing="false" text="10" toggleGroup="$FloorGroup" />
+                  <RadioButton fx:id="FloorNine" layoutX="58.0" layoutY="146.0" mnemonicParsing="false" text="9" toggleGroup="$FloorGroup" />
+                  <RadioButton fx:id="FloorFour" layoutX="147.0" layoutY="63.0" mnemonicParsing="false" text="4" toggleGroup="$FloorGroup" />
+                  <RadioButton fx:id="FloorSeven" layoutX="108.0" layoutY="108.0" mnemonicParsing="false" text="7" toggleGroup="$FloorGroup" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="ElevatorPanel" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="45.0" layoutY="14.0" text="Elevator">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="One" layoutX="45.0" layoutY="61.0" mnemonicParsing="false" onAction="#ButtonOneClick" text="1" />
+                  <Button fx:id="Four" layoutX="109.0" layoutY="107.0" mnemonicParsing="false" onAction="#ButtonFourClick" text="4" />
+                  <Button fx:id="Three" layoutX="44.0" layoutY="107.0" mnemonicParsing="false" onAction="#ButtonThreeClick" text="3" />
+                  <Button fx:id="Seven" layoutX="45.0" layoutY="188.0" mnemonicParsing="false" onAction="#ButtonSevenClick" text="7" />
+                  <Button fx:id="Two" layoutX="109.0" layoutY="61.0" mnemonicParsing="false" onAction="#ButtonTwoClick" text="2" />
+                  <Button fx:id="Six" layoutX="109.0" layoutY="149.0" mnemonicParsing="false" onAction="#ButtonSixClick" text="6" />
+                  <Button fx:id="Five" layoutX="44.0" layoutY="149.0" mnemonicParsing="false" onAction="#ButtonFiveClick" text="5" />
+                  <Button fx:id="Ten" layoutX="106.0" layoutY="230.0" mnemonicParsing="false" onAction="#ButtonTenClick" text="10" />
+                  <Button fx:id="Eight" layoutX="109.0" layoutY="188.0" mnemonicParsing="false" onAction="#ButtonEightClick" text="8" />
+                  <Button fx:id="Nine" layoutX="45.0" layoutY="230.0" mnemonicParsing="false" onAction="#ButtonNineClick" text="9" />
+                  <Button fx:id="Open" layoutX="28.0" layoutY="272.0" mnemonicParsing="false" text="OPEN" />
+                  <Button fx:id="Close" layoutX="106.0" layoutY="272.0" mnemonicParsing="false" text="CLOSE" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="StatusPanel" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="64.0" layoutY="14.0" text="Status">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="8.0" layoutY="64.0" text="Elevator On:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="8.0" layoutY="153.0" text="Elevator Going:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="8.0" layoutY="239.0" text="Elevator Schedule">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="ElevatorFloor" layoutX="17.0" layoutY="108.0" />
+                  <TextField fx:id="ElevatorGoing" layoutX="17.0" layoutY="195.0" />
+                  <TextField fx:id="ElevatorSchedule" layoutX="17.0" layoutY="281.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
