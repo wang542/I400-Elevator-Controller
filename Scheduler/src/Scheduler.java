@@ -82,15 +82,25 @@ public class Scheduler {
 	//If going in same direction, compare the first user's destination to the second user.
 	//Whoever has the smaller number, that user's choice is in front of the list.
 	
+	
 	@FXML
 	private void scheduleUpdate (ActionEvent event) {
-		panelController.
+		String container = "";
+		for (String floor: scheduleList) {
+			container += floor + " ";
+			ElevatorSchedule.setText(container);
+			delay();
+		}
 	}
 	
 	@FXML
 	private void direction (ActionEvent event) {
 		
 	}
+	
+	@FXML
+	private void currentFloor (ActionEvent event) {
+		}
 	
 	public static void delay() {
 		try {
