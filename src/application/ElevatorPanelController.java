@@ -180,6 +180,7 @@ public class ElevatorPanelController {
 			down=true;
 			FloorUPDOWN user=new FloorUPDOWN(floor,up,down);
 			floorupdown.add(user);
+			//comment area
 	}
 		
 		
