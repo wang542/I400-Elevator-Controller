@@ -20,8 +20,8 @@
                         <Font size="24.0" />
                      </font>
                   </Label>
-                  <Button fx:id="FloorUP" layoutX="40.0" layoutY="199.0" mnemonicParsing="false" text="UP" />
-                  <Button fx:id="FloorDOWN" layoutX="110.0" layoutY="199.0" mnemonicParsing="false" text="DOWN" />
+                  <Button fx:id="FloorUP" layoutX="40.0" layoutY="199.0" mnemonicParsing="false" onAction="#FloorUPButtons" text="UP" />
+                  <Button fx:id="FloorDOWN" layoutX="110.0" layoutY="199.0" mnemonicParsing="false" onAction="#FloorDOWNButtons" text="DOWN" />
                   <RadioButton fx:id="FloorOne" layoutX="22.0" layoutY="63.0" mnemonicParsing="false" text="1">
                      <toggleGroup>
                         <ToggleGroup fx:id="FloorGroup" />
@@ -29,11 +29,11 @@
                   </RadioButton>
                   <RadioButton fx:id="FloorThree" layoutX="107.0" layoutY="63.0" mnemonicParsing="false" text="3" toggleGroup="$FloorGroup" />
                   <RadioButton fx:id="FloorSix" layoutX="65.0" layoutY="108.0" mnemonicParsing="false" text="6" toggleGroup="$FloorGroup" />
-                  <RadioButton fx:id="FloorTwo" layoutX="58.0" layoutY="63.0" mnemonicParsing="false" text="2" toggleGroup="$FloorGroup" />
+                  <RadioButton fx:id="FloorTwo" layoutX="65.0" layoutY="63.0" mnemonicParsing="false" text="2" toggleGroup="$FloorGroup" />
                   <RadioButton fx:id="FloorFive" layoutX="21.0" layoutY="108.0" mnemonicParsing="false" text="5" toggleGroup="$FloorGroup" />
                   <RadioButton fx:id="FloorEight" layoutX="147.0" layoutY="108.0" mnemonicParsing="false" text="8" toggleGroup="$FloorGroup" />
-                  <RadioButton fx:id="FloorTen" layoutX="121.0" layoutY="146.0" mnemonicParsing="false" text="10" toggleGroup="$FloorGroup" />
-                  <RadioButton fx:id="FloorNine" layoutX="58.0" layoutY="146.0" mnemonicParsing="false" text="9" toggleGroup="$FloorGroup" />
+                  <RadioButton fx:id="FloorTen" layoutX="104.0" layoutY="146.0" mnemonicParsing="false" text="10" toggleGroup="$FloorGroup" />
+                  <RadioButton fx:id="FloorNine" layoutX="65.0" layoutY="146.0" mnemonicParsing="false" text="9" toggleGroup="$FloorGroup" />
                   <RadioButton fx:id="FloorFour" layoutX="147.0" layoutY="63.0" mnemonicParsing="false" text="4" toggleGroup="$FloorGroup" />
                   <RadioButton fx:id="FloorSeven" layoutX="108.0" layoutY="108.0" mnemonicParsing="false" text="7" toggleGroup="$FloorGroup" />
                </children>
@@ -45,18 +45,16 @@
                         <Font size="24.0" />
                      </font>
                   </Label>
-                  <Button fx:id="One" layoutX="45.0" layoutY="61.0" mnemonicParsing="false" onAction="#ButtonOneClick" text="1" />
-                  <Button fx:id="Four" layoutX="109.0" layoutY="107.0" mnemonicParsing="false" text="4" />
-                  <Button fx:id="Three" layoutX="44.0" layoutY="107.0" mnemonicParsing="false" text="3" />
-                  <Button fx:id="Seven" layoutX="45.0" layoutY="188.0" mnemonicParsing="false" text="7" />
-                  <Button fx:id="Two" layoutX="109.0" layoutY="61.0" mnemonicParsing="false" onAction="#ButtonTwoClick" text="2" />
-                  <Button fx:id="Six" layoutX="109.0" layoutY="149.0" mnemonicParsing="false" text="6" />
-                  <Button fx:id="Five" layoutX="44.0" layoutY="149.0" mnemonicParsing="false" text="5" />
-                  <Button fx:id="Ten" layoutX="106.0" layoutY="230.0" mnemonicParsing="false" onAction="#ButtonTenClick" text="10" />
-                  <Button fx:id="Eight" layoutX="109.0" layoutY="188.0" mnemonicParsing="false" text="8" />
-                  <Button fx:id="Nine" layoutX="45.0" layoutY="230.0" mnemonicParsing="false" text="9" />
-                  <Button fx:id="Open" layoutX="28.0" layoutY="272.0" mnemonicParsing="false" text="OPEN" />
-                  <Button fx:id="Close" layoutX="106.0" layoutY="272.0" mnemonicParsing="false" text="CLOSE" />
+                  <Button fx:id="One" layoutX="44.0" layoutY="49.0" mnemonicParsing="false" onAction="#ButtonOneClick" text="1" />
+                  <Button fx:id="Four" layoutX="109.0" layoutY="107.0" mnemonicParsing="false" onAction="#ButtonFourClick" text="4" />
+                  <Button fx:id="Three" layoutX="44.0" layoutY="107.0" mnemonicParsing="false" onAction="#ButtonThreeClick" text="3" />
+                  <Button fx:id="Seven" layoutX="44.0" layoutY="220.0" mnemonicParsing="false" onAction="#ButtonSevenClick" text="7" />
+                  <Button fx:id="Two" layoutX="109.0" layoutY="49.0" mnemonicParsing="false" onAction="#ButtonTwoClick" text="2" />
+                  <Button fx:id="Six" layoutX="109.0" layoutY="165.0" mnemonicParsing="false" onAction="#ButtonSixClick" text="6" />
+                  <Button fx:id="Five" layoutX="44.0" layoutY="165.0" mnemonicParsing="false" onAction="#ButtonFiveClick" text="5" />
+                  <Button fx:id="Ten" layoutX="105.0" layoutY="277.0" mnemonicParsing="false" onAction="#ButtonTenClick" text="10" />
+                  <Button fx:id="Eight" layoutX="109.0" layoutY="220.0" mnemonicParsing="false" onAction="#ButtonEightClick" text="8" />
+                  <Button fx:id="Nine" layoutX="44.0" layoutY="277.0" mnemonicParsing="false" onAction="#ButtonNineClick" text="9" />
                </children>
             </AnchorPane>
             <AnchorPane fx:id="StatusPanel" prefHeight="200.0" prefWidth="200.0">
@@ -81,7 +79,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="ElevatorFloor" layoutX="17.0" layoutY="108.0" onAction="#scheduleUpdate" />
+                  <TextField fx:id="ElevatorOn" layoutX="17.0" layoutY="108.0" />
                   <TextField fx:id="ElevatorGoing" layoutX="17.0" layoutY="195.0" onAction="#direction" />
                   <TextField fx:id="ElevatorSchedule" layoutX="17.0" layoutY="281.0" />
                </children>
